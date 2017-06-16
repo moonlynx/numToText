@@ -1,13 +1,14 @@
-/**
- * Переводит числовую запись числа в строковую
- * 123 => сто двадцать три
- *
- *@author {moonlynx} Yuri
- *
- *@version 0.1
- *
- */
 define(function() {
+    /**
+     * Переводит числовую запись числа в строковую
+     * 123 => сто двадцать три
+     *
+     *@author {moonlynx} Yuri
+     *
+     *@version 0.1
+     *
+     */
+    ;
     /**
      * Проверяет, является ли переданный аргумент числом и 
      * и лежит ли это число в перделах (-1000000000000000, 1000000000000000)
@@ -18,7 +19,7 @@ define(function() {
      */
     function checkArgument(argument) {
         if (!isFinite(argument)) {
-            throw new Error ("Argument of numToStr function must be number");
+            throw new Error ("Argument of numToText function must be number");
         }
 
         if (argument >= 1000000000000000) {
@@ -38,7 +39,7 @@ define(function() {
      *@return {String}
      */
 
-    function numToStr(num) {
+    function numToText(num) {
         
         checkArgument(num);
 
@@ -204,5 +205,5 @@ define(function() {
         return str;
     }
 
-    return numToStr;
+    return numToText;
 });

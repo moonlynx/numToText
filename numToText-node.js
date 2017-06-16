@@ -18,7 +18,7 @@
  */
 function checkArgument(argument) {
     if (!isFinite(argument)) {
-        throw new Error ("Argument of numToStr function must be number");
+        throw new Error ("Argument of numToText function must be number");
     }
 
     if (argument >= 1000000000000000) {
@@ -38,7 +38,7 @@ function checkArgument(argument) {
  *@return {String}
  */
 
-function numToStr(num) {
+function numToText(num) {
     
     checkArgument(num);
 
@@ -204,4 +204,4 @@ function checkThousandEnd(str) {
     return str;
 }
 
-module.exports.numToStr = numToStr;
+module.exports.numToText = numToText;
